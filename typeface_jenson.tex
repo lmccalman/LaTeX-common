@@ -1,0 +1,203 @@
+%the full "palette:" 6 7 8 9 10 11 12 14 16 18 21 24 36 48 60 72
+%margin paragraphs on the left for 1-sided document
+\reversemarginpar
+%make sure margin notes look shit-hot \marginpar
+%%%fonts %%%%
+%\onehalfspacing
+% \setstretch{0.1}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont[Numbers={OldStyle,Proportional}]{Adobe Jenson Pro}
+\setsansfont{Source Sans Pro}
+\setmonofont{Inconsolata}
+\setmathfont{Asana Math} 
+% Alternatives:
+% Latin Modern Math, XITS Math, Neo Euler, Asana Math,
+% Lucide New Math, Cambria Math,  Computer Modern
+
+
+%this is a fallback:
+%\setmathfont[range=\mathup/{num,latin,Latin,greek,Greek}]{Adobe Jenson Pro}
+%but this is ideal:
+\setmathfont[range={\mathup/{num,latin,Latin,greek,Greek},\question,\exclam,\mathdollar,%
+  \percent,\ampersand,\lparen,\rparen,\plus,\comma,\period,\mathslash,\mathcolon,%
+    \semicolon,\less,\equal,\greater,\backslash,\rbrack,\lbrack,\atsign,\vert,\lbrace,%
+    \rbrace,\times,\div}]{Adobe Jenson Pro}
+    \setmathfont[range=\mathsf/{num,latin,Latin,greek,Greek}]{Adobe Jenson Pro}
+    \setmathfont[range=\mathbfsf/{num,latin,Latin,greek,Greek}]{Adobe Jenson Pro Bold}
+    \setmathfont[range=\mathit/{num,latin,Latin,greek,Greek}]%
+{Adobe Jenson Pro Italic}
+\setmathfont[range=\mathsfit/{num,latin,Latin,greek,Greek}]%
+{Adobe Jenson Pro Italic}
+\setmathfont[range=\mathbfsfit/{num,latin,Latin,greek,Greek}]%
+{Adobe Jenson Pro Bold Italic}
+\setmathfont[range=\mathtt->\mathup]{Adobe Jenson Pro}
+
+
+
+\pretitle{%
+\begin{center}
+\fontsize{24}{24}\fontspec[RawFeature={+liga,+dlig,+fina},
+                           Style=Alternate]{Adobe Jenson Pro Italic}
+}
+\posttitle{\par\end{center}\vskip 1em}
+\preauthor{\begin{center}
+% \fontsize{14}{14}\fontspec[Ligatures=Historical]{Adobe Jenson Pro Italic}
+\fontsize{14}{14}\fontspec[RawFeature={+liga,+dlig,+fina},
+                          ]{Adobe Jenson Pro Italic}
+\lineskip 1em%
+\begin{tabular}[t]{c}}
+\postauthor{\end{tabular}\par\end{center}}
+
+\predate{\begin{center}
+\fontsize{11}{11}\fontspec[LetterSpace=30,
+                           Letters=SmallCaps,
+                           Numbers={OldStyle,Proportional}]{Adobe Jenson Pro}
+}
+\postdate{\par\end{center}}
+
+
+% \newcommand{\sidenote}[1]{
+% \marginline{{\fontsize{8}{8}\selectfont
+% \begin{spacing}{1}
+% #1
+% \end{spacing} }}
+% }
+
+
+\postdate{\par\end{center}}
+
+
+\setkomafont{disposition}{%
+\fontspec{Adobe Jenson Pro}
+}
+  
+\setkomafont{section}{%
+  \rm\fontsize{11}{11}\fontspec[LetterSpace=20,
+                              Letters=SmallCaps]{Adobe Jenson Pro}
+}
+\setkomafont{subsection}{%
+ \fontspec{Adobe Jenson Pro Italic}
+}
+
+% \setkomafont{caption}{%
+
+% }
+% \setkomafont{captionlabel}{%
+
+% }
+% \setkomafont{chapter}{%
+
+% }
+% \setkomafont{chapterentry}{%
+
+% }
+% \setkomafont{chapterentrypagenumber}{%
+
+% }
+% \setkomafont{chapterprefix}{%
+
+% }
+% \setkomafont{descriptionlabel}{%
+
+% }
+% \setkomafont{dictum}{%
+
+% }
+% \setkomafont{dictumauthor}{%
+
+% }
+% \setkomafont{dictumtext}{%
+
+% }
+% \setkomafont{disposition}{% all sectional unit titles
+
+% }
+% \setkomafont{footnote}{% 
+
+% }
+% \setkomafont{footnotelabel}{%
+
+% }
+% footnotereference
+% footnoterule
+% labelinglabel
+% labelingseparator
+% minisec
+% pagefoot
+% pageheadfoot
+% pagenumber
+% pagination
+% paragraph
+% part
+% partentry
+% partentrypagenumber
+% partnumber
+% sectionentry
+% sectionentrypagenumber
+% sectioning %another name for disposition
+% subject
+% subparagraph
+% subsection
+% subsubsection
+% title
+
+%use \minisec for a heading without TOC or a space, eg top of a recipe
+
+% \documentclass{article}
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures={Historical}}
+% \setmainfont{Adobe Jenson Pro}
+% \usepackage{selnolig}
+% \nolig{st}{s|t}
+% \begin{document}
+% best pact 
+% \end{document}
+
+%For small caps
+%\fontspec[Letters=SmallCaps]{Garamond Premier Pro}
+%see also Lining, Monospaced for tables
+%\fontspec[Numbers=SlashedZero,OldStyle,Proportional]{Garamond Premier Pro} %
+%\fontspec[Contextuals=Swash,Alternate,WordInitial,WordFinal,LineFinal,Inner]{Garamond Premier Pro} %
+%\fontspec[StylisticSet=2]{Garamond Premier Pro} %
+
+%individual character variations
+%\fontspec[CharacterVariant={5:2}]{EB Garamond Italic}
+
+%style variations
+%\fontspec[Style=Alternate]{EB Garamond Italic} % see also Swash,Historic,TitlingCaps,Italic
+
+
+%\note: use mathscr not mathcal
+
+% OOOh, use 
+%\fontspec[Style=Historic]{Adobe Jenson Pro} % looks great
+
+%\fontspec[Style=TitlingCaps]{Adobe Garamond Pro} % looks great
+
+%Go behind fontspec's back
+%\fontspec[RawFeature=+smcp;+onum]{Adobe Jenson Pro}
+
+%get maths fonts working?
+% \setmathfont{STIXGeneral}
+% \setmathfont[range=\mathit/{latin,Latin}]{Sorts Mill Goudy}
+% \setmathfont[range=\mathit/{greek,Greek}]{Adobe Jenson Pro}
+
+%define how emphasis is used
+\renewcommand\emshape{\bfseries}
+
+% Add feature to a particular shape
+%\addfontfeature{ItalicFeatures={Alternate = 1}}
+
+% how to define a new font command which works with \textbf etc.
+\newfontfamily\notefont{Adobe Jenson Pro}
+\newcommand\textnote[1]{{\notefont #1}} %Double braces are intentional
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+%for a specific face that can't be altered
+% \newfontface\fancy[Contextuals={WordInitial,WordFinal}]{Garamond Premier Pro}
+%\fontspec[BoldFont={* SemiBold}]{Baskerville}
+
+
+%\setmainfont[Ligatures={Common,Rare}]{Adobe Caslon Pro}
+% \usepackage{microtype}% this needs to be last

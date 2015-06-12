@@ -1,0 +1,32 @@
+\setmathfont{Asana Math} 
+
+% \setmathfont[range={\mathup/{num,latin,Latin,greek,Greek},\question,\exclam,\mathdollar,%
+  % \percent,\ampersand,\lparen,\rparen,\plus,\comma,\period,\mathslash,\mathcolon,%
+    % \semicolon,\less,\equal,\greater,\backslash,\rbrack,\lbrack,\atsign,\vert,\lbrace,%
+    % \rbrace,\times,\div}]{Garamond Premier Pro}
+
+\setmathfont[range={\mathup/{num,latin,Latin,greek,Greek},\question,\exclam,\mathdollar,%
+  \percent,\ampersand,\plus,\comma,\period,\mathslash,\mathcolon,%
+  \semicolon,\less,\equal,\greater,\backslash,\atsign,\vert,%
+  \times,\div}]{Garamond Premier Pro}
+    \setmathfont[range=\mathsf/{num,latin,Latin,greek,Greek}]{Garamond Premier Pro}
+    \setmathfont[range=\mathbfsf/{num,latin,Latin,greek,Greek}]{Garamond Premier Pro Bold}
+    \setmathfont[range=\mathit/{num,latin,Latin,greek,Greek}]%
+{Garamond Premier Pro Italic}
+\setmathfont[range=\mathsfit/{num,latin,Latin,greek,Greek}]%
+{Garamond Premier Pro Italic}
+\setmathfont[range=\mathbfsfit/{num,latin,Latin,greek,Greek}]%
+{Garamond Premier Pro Bold Italic}
+\setmathfont[range=\mathtt->\mathup]{Garamond Premier Pro}
+\setmathfont[range={\mathcal,\mathbfcal}, RawFeature={+swsh}]{Garamond Premier Pro Italic}
+
+\removenolimits{\int}
+\removenolimits{\iint}
+\removenolimits{\iiint}
+
+% how to define a new font command which works with \textbf etc.
+\newfontfamily\notefont{Garamond Premier Pro}
+\newcommand\textnote[1]{{\notefont #1}} %Double braces are intentional
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+

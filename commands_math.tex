@@ -1,0 +1,27 @@
+\renewcommand{\v}[1]{\mathbf{#1}}
+\renewcommand{\d}{\,\mathrm{d}}
+\newcommand{\vp}[1]{\mathbf{#1}^{\prime}}
+\newcommand{\h}[1]{\hat{#1}}
+\newcommand{\cov}[2]{\mathrm{Cov}(#1,#2)}
+\newcommand{\hil}{\mathscr{H}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\complexs}{\mathbb{C}}
+\newcommand{\dprod}[2]{{\langle #1, #2 \rangle}}
+\newcommand{\expec}[1]{\mathrm{E}\left[#1\right]}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\norm}[1]{\|#1\|}
+
+\let\oldint\int
+\grenewcommand\int{\oldint\!}
+\grenewcommand{\epsilon}{\varepsilon}
+
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+\newtheorem{prp}{Proposition}[section]
+\newtheorem{thm}{Theorem}[section]
+
+\theoremstyle{definition}
+\newtheorem{dfn}{Definition}[section]
+
